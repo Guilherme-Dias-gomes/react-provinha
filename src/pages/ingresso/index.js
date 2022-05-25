@@ -1,7 +1,4 @@
-
-
-
-export default function index() {
+export default function Index() {
     return(
         <main>
             <h2>Ingresso</h2>
