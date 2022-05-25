@@ -3,18 +3,18 @@ import { useState } from "react"
 import { Link } from 'react-router-dom';
 
 export default function Index() {
-    const [numerosCopia, setNumerosCopia] = useState([]);
+    const [numeros, setNumeros] = useState([]);
     const [numero, setNumero] = useState(0);
     const [result, setResult] = useState('');
 
         function AddNumero() {
-            setNumerosCopia([...numerosCopia, numero]);
+            setNumeros([...numeros, numero])
             setNumero('');
         }
 
         async function MaiorNumero() {
-            const resp = await axios.post('http://localhost:5000/dia2/maiornumero', numerosCopia);
-            setResult(resp.data.x);
+            const resp = await axios.post('http://localhost:5000/dia2/maiornumero', numeros);
+            setResult(resp.data.maior);
         }
     return(
         <main>
@@ -22,12 +22,12 @@ export default function Index() {
             <p>Descubra o número maior!!</p>
 
             <div>
-                Digite os números: <input type='text' value={numero} onChange={e => setNumero(Number(e.target.value))} />
+                Digite os números: <input type='text' value={numero} onChange = {e => setNumero(Number(e.target.value))} />
                 <button onClick={AddNumero}> Adicione outro Número</button>
             </div>
 
             <div>
-                {numerosCopia.map (i => 
+                {numeros.map (i => 
                     <div> {i} </div>    
                 )}
             </div>
