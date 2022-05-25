@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { useState } from "react"
+import { Link } from 'react-router-dom';
 
 export default function Index() {
     const [cor,  setCor] = useState('');
@@ -27,6 +28,10 @@ export default function Index() {
             </div>
             <div>
                 É uma cor primaria ? {result}
+            </div>
+
+            <div> 
+                <Link to='/' > Volte para Home</Link>
             </div>
         </main>
     )
