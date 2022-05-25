@@ -36,8 +36,10 @@ export default function Index() {
                 <button onClick={MaiorNumero}> Verificar </button> O maior número é {result}
             </div>
 
-
-            <Link to = '/'> Voltar para Home</Link>
+            <div>
+                <Link to = '/'> Voltar para Home</Link>
+            </div>
+            
         </main>
     )
 }

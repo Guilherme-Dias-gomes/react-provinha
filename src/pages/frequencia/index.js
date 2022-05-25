@@ -27,6 +27,10 @@ export default function Index() {
             <div>
                 Frequência: {resposta}
             </div>
+
+            <div>
+                <Link to = '/'> Voltar para Home</Link>
+            </div>
         </main>
     )
 }
