@@ -1,18 +1,17 @@
+import { Link } from "react-router-dom";
 
-
-
-export default function index() {
-    return(
+export default function Index(){
+    return (
         <main>
-            <h2>Home</h2>
+            <h1> Home </h1>
+
 
             <ul>
-                <li> <link to='corPrimaria'> Cor Primária </link> </li>
-                <li> <link to='frequencia'> Frequência </link> </li>
-                <li> <link to='ingresso'> Ingresso </link> </li>
-                <li> <link to='maiorNumero'> Maior Número </link> </li>
+            <li> <Link to='/corPrimaria'> Cor Primária </Link></li>
+            <li> <Link to='/frequencia'> Frequencia </Link></li>
+            <li> <Link to='/ingresso'> Ingresso </Link></li>
+            <li> <Link to='/maiorNumero'>Maior Número</Link></li>
             </ul>
-
         </main>
     )
 }
